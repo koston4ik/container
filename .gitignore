@@ -3,5 +3,8 @@
 .settings/
 bin/
 
-.gradle/
 build/
+.gradle/
+gradle/
+gradlew
+gradlew.bat
