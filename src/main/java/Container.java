@@ -49,4 +49,22 @@ public class Container<T> {
     	}
     	size++;
     }
+    
+    public void Remove(int index) {
+    	if(index < 0 || index >= size) {
+    		throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+    	}
+    	
+    	if(index == 0) {
+    		head = head.next;
+    	}
+    	else {
+    		Node<T> current = head;
+    		for(int i = 0; i < index - 1; i++) {
+    			current = current.next;
+    		}
+    		current.next = current.next.next;
+    	}
+    	size--;
+    }
 }
